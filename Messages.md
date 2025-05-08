@@ -95,3 +95,7 @@ Working /
     ↓
 (repeat)
 ```
+A spinner that has finished its job is shown as this:
+```
+Working +
+```
