@@ -34,7 +34,7 @@ Progressbars have to be defined as an object like this:
 {
   "label": "Example",
   "type": "number",
-  "max": 255,
+  "max": 256,
   "wait": 500
 }
 ```
