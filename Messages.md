@@ -44,7 +44,7 @@ Where
   - *percent* - shows the total percentage completed
   - *number* - shows the raw progress number
 - **max** - the number to which the bar counts up from 0 (inclusive)
-- **wait** - the number of millisecons 
+- **wait** - the number of millisecons to wait before incrementing. Must be a multiple of 50
 
 ### Examples
 Waiting progressbar
