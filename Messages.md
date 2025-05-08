@@ -1,4 +1,5 @@
 This JSON file contains everything the program will show on screen, picked randomly.
+The file stored on this repository is the default file that the program will download if the local one in ~/.local/share/hackerterminal is missing.
 # File structure
 On the top level there are
 - normal
