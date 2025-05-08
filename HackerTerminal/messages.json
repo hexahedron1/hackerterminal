@@ -1,0 +1,42 @@
+{
+  "normal": [
+    "WARNING: you did not eat your vegetables.",
+    "This is fine.",
+    "Found 50 dollars on the sidewalk.",
+    "I have no idea what i am doing."
+  ],
+  "progressbars": [
+    {
+      "label": "Installing Arch Linux",
+      "type": "percent",
+      "max": 4096,
+      "wait": 0
+    },
+    {
+      "label": "Deleting /usr/bin",
+      "type": "percent",
+      "max": 3784,
+      "wait": 0
+    },
+    {
+      "label": "Downloading torrent",
+      "type": "percent",
+      "max": 1529,
+      "wait": 650
+    }
+  ],
+  "tasks": [
+    "Hacking the mainframe",
+    {
+      "label": "Trying to not procrastinate",
+      "failchance": 75
+    }
+  ],
+  "spinners": [
+    "Doing nothing",
+    "Doing something",
+    "Hacking ig",
+    "Watching a youtube tutorial",
+    "Waiting for stars to align"
+  ]
+}
