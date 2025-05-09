@@ -1,0 +1,25 @@
+{
+  "normal": [],
+  "progressbars": [
+    {
+      "label": "testbar1",
+      "number": false,
+      "max": 256,
+      "wait": 1000
+    },
+    {
+      "label": "testbar2",
+      "number": true,
+      "max": 256,
+      "wait": 250
+    },
+    {
+      "label": "testbar3",
+      "number": false,
+      "max": 100,
+      "wait": 1295
+    }
+  ],
+  "tasks": [],
+  "spinners": []
+}

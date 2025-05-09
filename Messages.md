@@ -33,16 +33,14 @@ Progressbars have to be defined as an object like this:
 ```json lines
 {
   "label": "Example",
-  "type": "number",
+  "number": true,
   "max": 256,
   "wait": 500
 }
 ```
 Where
 - **label** - the text that gets shown on screen
-- **type** - the type of the progressbar
-  - *percent* - shows the total percentage completed
-  - *number* - shows the raw progress number
+- **number** - whether to show the progress number rather than the percentage
 - **max** - the number to which the bar counts up from 0 (inclusive)
 - **wait** - the number of millisecons to wait before incrementing. Must be a multiple of 50
 

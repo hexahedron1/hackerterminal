@@ -8,19 +8,19 @@
   "progressbars": [
     {
       "label": "Installing Arch Linux",
-      "type": "percent",
+      "number": false,
       "max": 4096,
       "wait": 0
     },
     {
       "label": "Deleting /usr/bin",
-      "type": "percent",
+      "number": false,
       "max": 3784,
       "wait": 0
     },
     {
       "label": "Downloading torrent",
-      "type": "percent",
+      "number": false,
       "max": 1529,
       "wait": 650
     }
@@ -30,6 +30,10 @@
     {
       "label": "Trying to not procrastinate",
       "failchance": 75
+    },
+    {
+      "label": "Trying to make more random messages",
+      "failchance": 40
     }
   ],
   "spinners": [
@@ -37,6 +41,8 @@
     "Doing something",
     "Hacking ig",
     "Watching a youtube tutorial",
-    "Waiting for stars to align"
+    "Waiting for stars to align",
+    "Idling",
+    "Making more spinners"
   ]
 }
