@@ -1,6 +1,4 @@
-﻿using System.Text;
-using System.Text.Json.Nodes;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 if (!Directory.Exists($"/home/{Environment.UserName}/.local/share/hackerterminal"))
@@ -39,14 +37,14 @@ string[] normal = obj["normal"] is null ? [] : (from x in obj["normal"]! select 
 Progressbar[] pbars = new Progressbar[obj["progressbars"]?.Count() ?? 0];
 int ii = 0;
 foreach (var objekt in obj["progressbars"] ?? new JArray()) {
-    pbars[ii] = new Progressbar(objekt["label"].Value<string>(), objekt["number"].Value<bool>(), objekt["max"].Value<int>(), objekt["wait"].Value<int>());
+    pbars[ii] = new Progressbar(objekt["label"]?.Value<string>() ?? "null", objekt["number"]?.Value<bool>() ?? false, objekt["max"]?.Value<int>() ?? 100, objekt["wait"]?.Value<int>() ?? 0);
     ii++;
 }
 HackTask[] tasks = new HackTask[obj["tasks"]?.Count() ?? 0];
 ii = 0;
-foreach (var pöllö in obj["tasks"] ?? new JArray()) {
-    if (pöllö is JObject objekt) tasks[ii] = new HackTask(objekt["label"].Value<string>()) { FailChance = objekt["failchance"].Value<int>()};
-    else if (pöllö is JValue value) tasks[ii] = new HackTask(value.Value<string>());
+foreach (var owl in obj["tasks"] ?? new JArray()) {
+    if (owl is JObject objekt) tasks[ii] = new HackTask(objekt["label"]?.Value<string>() ??  "null") { FailChance = objekt["failchance"]?.Value<int>() ?? 10};
+    else if (owl is JValue value) tasks[ii] = new HackTask(value.Value<string>() ?? "null");
     ii++;
 }
 string[] spinners = obj["spinners"] is null ? [] : (from x in obj["spinners"]! select x.Value<string>()).ToArray();
@@ -71,7 +69,7 @@ while (true) {
             break;
         case 1:
             Console.CursorVisible = false;
-            var oldbar = (Progressbar)PickRandom(pbars, rand).Clone();
+            var oldbar = PickRandom(pbars, rand);
             if (oldbar is null) break;
             var bar = new Progressbar(oldbar.Label, oldbar.Number, oldbar.Max, oldbar.Wait);
             bar.Sleep();
